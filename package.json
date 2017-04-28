@@ -1,0 +1,20 @@
+{
+  "name": "openroads-tilemap",
+  "version": "0.0.1",
+  "description": "tessera and mapnik config for openroads",
+  "main": "index.js",
+  "author": "Development Seed <dev@developmentseed.org>",
+  "scripts": {
+    "start": "envsubst < openroads.tilejson.tmpl > openroads.tilejson && tessera -p 3000 -C 0.000001 -c config.json"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "tessera": "0.5.3",
+    "tilelive": "5.11.0",
+    "tilelive-vector": "3.5.2",
+    "tilejson": "1.0.1"
+  },
+  "devDependencies": {
+    "carto": "0.15.3"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "/": {
+    "source": "vector:///opt/app/styles/base-style/or-style.xml"
+  },
+  "/dashboard": {
+    "source":  "vector:///opt/app/styles/alt-style/or-style.xml"
+  },
+  "/ml-training": {
+    "source":  "vector:///opt/app/styles/ml-training/ml-style.xml"
+  }
+}

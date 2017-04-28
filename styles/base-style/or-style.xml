@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+
+<Parameters>
+  <Parameter name="bounds">-180,-85.05112877980659,180,85.05112877980659</Parameter>
+  <Parameter name="center">0,0,2</Parameter>
+  <Parameter name="format">png8</Parameter>
+  <Parameter name="minzoom">0</Parameter>
+  <Parameter name="maxzoom">16</Parameter>
+  <Parameter name="source"><![CDATA[tilejson:///opt/app/openroads.tilejson]]></Parameter>
+  <Parameter name="scale">1</Parameter>
+  <Parameter name="metatile">2</Parameter>
+  <Parameter name="name"><![CDATA[OR base style]]></Parameter>
+  <Parameter name="description"><![CDATA[Base style for the OpenRoads road network]]></Parameter>
+</Parameters>
+
+
+<Style name="network-fill" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([or_responsibility] = 'barangay')</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linejoin="round" stroke="#eaeaea" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([or_responsibility] = 'barangay')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke-linejoin="round" stroke="#eaeaea" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([or_responsibility] = 'barangay')</Filter>
+    <LineSymbolizer stroke-width="1" stroke-linejoin="round" stroke="#eaeaea" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([or_responsibility] = 'barangay')</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke-linejoin="round" stroke="#eaeaea" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([or_responsibility] = 'barangay')</Filter>
+    <LineSymbolizer stroke-width="0" stroke="#c2baa6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([or_responsibility] = 'municipal')</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linejoin="round" stroke="#ffff7e" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([or_responsibility] = 'municipal')</Filter>
+    <LineSymbolizer stroke-width="2.5" stroke-linejoin="round" stroke="#ffff7e" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([or_responsibility] = 'municipal')</Filter>
+    <LineSymbolizer stroke-width="1.4" stroke-linejoin="round" stroke="#ffff7e" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([or_responsibility] = 'municipal')</Filter>
+    <LineSymbolizer stroke-width="0.5" stroke-linejoin="round" stroke="#ffff7e" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([or_responsibility] = 'municipal')</Filter>
+    <LineSymbolizer stroke-width="0" stroke="#c2baa6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([or_responsibility] = 'provincial')</Filter>
+    <LineSymbolizer stroke-width="6" stroke-linejoin="round" stroke="#eab056" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([or_responsibility] = 'provincial')</Filter>
+    <LineSymbolizer stroke-width="3.5" stroke-linejoin="round" stroke="#eab056" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([or_responsibility] = 'provincial')</Filter>
+    <LineSymbolizer stroke-width="2.5" stroke-linejoin="round" stroke="#eab056" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([or_responsibility] = 'provincial')</Filter>
+    <LineSymbolizer stroke-width="1.25" stroke-linejoin="round" stroke="#eab056" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([or_responsibility] = 'provincial')</Filter>
+    <LineSymbolizer stroke-width="0.55" stroke-linejoin="round" stroke="#eab056" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([or_responsibility] = 'provincial')</Filter>
+    <LineSymbolizer stroke-width="0.35" stroke-linejoin="round" stroke="#eab056" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([or_responsibility] = 'national')</Filter>
+    <LineSymbolizer stroke-width="7" stroke-linejoin="round" stroke="#e06d5f" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([or_responsibility] = 'national')</Filter>
+    <LineSymbolizer stroke-width="5" stroke-linejoin="round" stroke="#e06d5f" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([or_responsibility] = 'national')</Filter>
+    <LineSymbolizer stroke-width="3.5" stroke-linejoin="round" stroke="#e06d5f" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([or_responsibility] = 'national')</Filter>
+    <LineSymbolizer stroke-width="2.5" stroke-linejoin="round" stroke="#e06d5f" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([or_responsibility] = 'national')</Filter>
+    <LineSymbolizer stroke-width="2" stroke-linejoin="round" stroke="#e06d5f" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([or_responsibility] = 'national')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke-linejoin="round" stroke="#e06d5f" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2) and ([or_responsibility] = 'national')</Filter>
+    <LineSymbolizer stroke-width="1" stroke-linejoin="round" stroke="#e06d5f" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke-width="4" stroke="#c2baa6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke="#c2baa6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#c2baa6" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([mapnik::geometry_type] = 2)</Filter>
+    <LineSymbolizer stroke-width="0" stroke="#c2baa6" />
+  </Rule>
+</Style>
+<Style name="network-case" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([or_responsibility] = 'barangay')</Filter>
+    <LineSymbolizer stroke-width="6" stroke-linejoin="round" stroke="#5e5e5e" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([or_responsibility] = 'barangay')</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linejoin="round" stroke="#5e5e5e" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([or_responsibility] = 'barangay')</Filter>
+    <LineSymbolizer stroke-width="1.5" stroke-linejoin="round" stroke="#5e5e5e" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([or_responsibility] = 'barangay')</Filter>
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#5e5e5e" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([or_responsibility] = 'municipal')</Filter>
+    <LineSymbolizer stroke-width="6.5" stroke-linejoin="round" stroke="#666632" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([or_responsibility] = 'municipal')</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linejoin="round" stroke="#666632" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([or_responsibility] = 'municipal')</Filter>
+    <LineSymbolizer stroke-width="2" stroke-linejoin="round" stroke="#666632" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([or_responsibility] = 'municipal')</Filter>
+    <LineSymbolizer stroke-width="1.25" stroke-linejoin="round" stroke="#666632" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([or_responsibility] = 'municipal')</Filter>
+    <LineSymbolizer stroke-width="0" stroke-linejoin="round" stroke="#666632" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([or_responsibility] = 'provincial')</Filter>
+    <LineSymbolizer stroke-width="10" stroke-linejoin="round" stroke="#5e4622" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([or_responsibility] = 'provincial')</Filter>
+    <LineSymbolizer stroke-width="8" stroke-linejoin="round" stroke="#5e4622" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([or_responsibility] = 'provincial')</Filter>
+    <LineSymbolizer stroke-width="6" stroke-linejoin="round" stroke="#5e4622" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([or_responsibility] = 'provincial')</Filter>
+    <LineSymbolizer stroke-width="4" stroke-linejoin="round" stroke="#5e4622" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([or_responsibility] = 'provincial')</Filter>
+    <LineSymbolizer stroke-width="2" stroke-linejoin="round" stroke="#5e4622" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([or_responsibility] = 'provincial')</Filter>
+    <LineSymbolizer stroke-width="0.6" stroke-linejoin="round" stroke="#5e4622" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([or_responsibility] = 'national')</Filter>
+    <LineSymbolizer stroke-width="11" stroke="#703730" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([or_responsibility] = 'national')</Filter>
+    <LineSymbolizer stroke-width="8.5" stroke="#703730" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([or_responsibility] = 'national')</Filter>
+    <LineSymbolizer stroke-width="6.5" stroke="#703730" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([or_responsibility] = 'national')</Filter>
+    <LineSymbolizer stroke-width="4.5" stroke="#703730" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([or_responsibility] = 'national')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#703730" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([or_responsibility] = 'national')</Filter>
+    <LineSymbolizer stroke-width="0.6" stroke="#703730" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="6.5" stroke="#6a6a56" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <LineSymbolizer stroke-width="4" stroke="#6a6a56" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="2" stroke="#6a6a56" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>3000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="0" stroke="#6a6a56" />
+  </Rule>
+</Style>
+<Style name="network" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke="rgba(0, 0, 0, 0)" />
+  </Rule>
+</Style>
+<Layer name="network"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>network</StyleName>
+    <StyleName>network-case</StyleName>
+    <StyleName>network-fill</StyleName>  </Layer>
+
+</Map>
