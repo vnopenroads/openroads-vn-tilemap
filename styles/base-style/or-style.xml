@@ -44,7 +44,7 @@
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
     <MinScaleDenominator>200000</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([or_responsibility] = 'barangay')</Filter>
-    <LineSymbolizer stroke-width="0" stroke="#c2baa6" />
+    <LineSymbolizer stroke-width="0.5" stroke="#c2baa6" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
@@ -73,7 +73,7 @@
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
     <MinScaleDenominator>200000</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2) and ([or_responsibility] = 'municipal')</Filter>
-    <LineSymbolizer stroke-width="0" stroke="#c2baa6" />
+    <LineSymbolizer stroke-width="0.5" stroke="#c2baa6" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
@@ -154,25 +154,25 @@
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2)</Filter>
-    <LineSymbolizer stroke-width="4" stroke="#c2baa6" />
+    <LineSymbolizer stroke-width="4" stroke="#c2baa6" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2)</Filter>
-    <LineSymbolizer stroke-width="1.5" stroke="#c2baa6" />
+    <LineSymbolizer stroke-width="1.5" stroke="#c2baa6" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2)</Filter>
-    <LineSymbolizer stroke-width="1" stroke="#c2baa6" />
+    <LineSymbolizer stroke-width="1" stroke="#c2baa6" stroke-linejoin="round" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>3000000</MaxScaleDenominator>
     <MinScaleDenominator>100000</MinScaleDenominator>
     <Filter>([mapnik::geometry_type] = 2)</Filter>
-    <LineSymbolizer stroke-width="0" stroke="#c2baa6" />
+    <LineSymbolizer stroke-width="0.5" stroke="#c2baa6" stroke-linejoin="round" />
   </Rule>
 </Style>
 <Style name="network-case" filter-mode="first">

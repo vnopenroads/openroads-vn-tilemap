@@ -65,7 +65,10 @@
   ::fill[zoom>=8]['mapnik::geometry_type'=2] {
     line-width: 0;
     line-color: #c2baa6;
+    line-join:round;
 
+    [zoom>=0] { line-width: 0; }
+    [zoom>=6] { line-width: 0.5; }
     [zoom>=13] { line-width: 1; }
     [zoom>=15] { line-width:1.5; }
     [zoom>=16] { line-width:4; }
