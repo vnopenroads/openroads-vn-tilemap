@@ -7,5 +7,8 @@
   },
   "/ml-training": {
     "source":  "vector:///opt/app/styles/ml-training/ml-style.xml"
+  },
+  "/openroads-vn": {
+    "source": "vector:///opt/app/styles/openroads-vn/or-style.xml"
   }
 }

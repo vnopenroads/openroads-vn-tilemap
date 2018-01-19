@@ -1,6 +1,6 @@
 {
   "name": "openroads-tilemap",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "tessera and mapnik config for openroads",
   "main": "index.js",
   "author": "Development Seed <dev@developmentseed.org>",
