@@ -9,12 +9,12 @@
   },
   "license": "MIT",
   "dependencies": {
-    "tessera": "0.5.3",
-    "tilelive": "5.11.0",
-    "tilelive-vector": "3.5.2",
-    "tilejson": "1.0.1"
+    "tessera": "0.14.1",
+    "@mapbox/tilelive": "6.0.0",
+    "@mapbox/tilelive-vector": "4.2.0",
+    "@mapbox/tilejson": "1.1.0"
   },
   "devDependencies": {
-    "carto": "0.15.3"
+    "carto": "^0.15.3"
   }
 }
