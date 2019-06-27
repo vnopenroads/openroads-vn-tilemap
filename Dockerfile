@@ -1,5 +1,4 @@
-FROM node:4.2
-LABEL maintainer="Marc Farra <marc@developmentseed.org>"
+FROM node:8.16.0
 
 # install gettext for envsubst
 RUN apt-get update
