@@ -1,4 +1,4 @@
-FROM node:8.16.0-alpine
+FROM node:10.23.2-alpine
 
 # install gettext for envsubst
 # - it needs libintl package
