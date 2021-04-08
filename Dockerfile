@@ -1,8 +1,16 @@
-FROM node:8.16.0
+FROM node:10.23.2-alpine
 
 # install gettext for envsubst
-RUN apt-get update
-RUN apt-get install -y gettext-base
+# - it needs libintl package
+# - only weights 100KB combined with it's libraries
+RUN apk update && \
+    apk add --update libintl && \
+    apk add --virtual build_deps gettext && \
+    mv /usr/bin/envsubst /usr/local/bin/envsubst && \
+    apk del build_deps
+
+# Dependency for mapnik
+RUN apk add gcompat
 
 # Install node modules
 ENV NPM_CONFIG_LOGLEVEL=warn
